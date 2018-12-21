@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela+Round');
+
+/*VARIABELEN*/
+$color1: #fad454;
+$color2: #e96669;
+$color3: #fd9945;
+$color4: #553c55;
+$color5: #9bceb7;
+$color6: #707070;
+
+$fontset1: 'Varela Round',
+sans-serif;
+$fontset2: 'Open Sans',
+sans-serif;
+
+$breekpunt: 850px;
+
+$col-1: 8,
+3333%;
+$col-2: 16,
+6666%;
+$col-3: 25%;
+$col-4: 33,
+3333%;
+$col-5: 41.6666%;
+$col-6: 50%;
+$col-7: 25%;
+$col-8: 66.66%;
+$col-9: 75%;
+$col-10: 83.33%;
+$col-11: 91.66%;
+$col-12: 100%;
+
+/*OPMAAK*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $fontset2;
+    box-sizing: border-box;
+}
+
+body {
+    color: $color6;
+    background-color: $color1;
+
+    /*TYPOGRAPHY*/
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $fontset1;
+        max-width: 800px;
+    }
+
+    h1 {
+        line-height: 1em;
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 3rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    h4{
+        font-size: 1.5rem;
+    }
+
+    h5{
+        font-size: 6rem;
+        font-weight: 900;
+        padding-bottom: -20px;
+    }  
+    h6{
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        
+    }
+
+    p {
+        font-family: $fontset2;
+        margin-top: 30px;
+        font-size: 1.2rem;
+        line-height: 1.7em;
+    }
+
+    /*TERUGKERENDE LAY_OUT*/
+
+    .navbar {
+        /* Create a sticky/fixed navbar */
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 50px 10px;
+        /* Large padding which will shrink on scroll (using JS) */
+        transition: 0.4s;
+        /* Adds a transition effect when the padding is decreased */
+        position: fixed;
+        /* Sticky/fixed navbar */
+        width: 100%;
+        top: 0;
+        /* At the top */
+        z-index: 99;
+
+        /* Style the navbar links */
+        a {
+            font-family: $fontset1;
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        #logolink:hover {
+            background-color: none;
+        }
+
+        a.icon {
+            display: none;
+        }
+
+        #logo {
+            margin-left: 20px;
+            max-width: 45px;
+        }
+
+        a:hover {
+            background-color: #ddd;
+            color: darkslategray;
+        }
+
+        a.active {
+            color: $color2;
+            border-bottom: 4px solid $color2;
+            border-radius: 0;
+        }
+
+        .navbar-right {
+            float: right;
+        }
+
+        /* Add responsiveness - on screens less than 850px wide, display the navbar vertically instead of horizontally */
+        @media (max-width: $breekpunt) {
+
+            #navbar {
+                padding: 20px 10px !important;
+                /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+                overflow: hidden;
+                position: relative;
+            }
+
+            a {
+                display: block;
+            }
+
+            .navbar-right #links {
+                display: none;
+            }
+
+            .navbar-right {
+                a {
+                    display: block;
+                }
+            }
+
+            /* Style the hamburger menu */
+            a.icon {
+                display: block;
+                font-size: 25px;
+            }
+
+            #logo {
+                margin-left: 20px;
+            }
+
+        }
+    }
+
+    .container-fluid {
+        margin: 0 auto;
+        height: auto;
+        max-width: 100%;
+
+
+        /*HOMEPAGE*/
+        .home-row {
+
+            &.row {
+                height: auto
+            }
+
+            position: relative;
+            width: 100%;
+            max-height: 400px;
+
+            .home-ill {
+                padding: 40px 0;
+                float: left;
+                display: block;
+                background-color: $color4;
+                z-index: 10;
+                position: absolute;
+                position: fixed;
+                border-radius: 0 4px 4px 0;
+
+                max-width: 25%;
+                height: 50%;
+
+                .home-ill-div {
+                    img {
+                        position: absolute;
+                        left: 65%;
+                        z-index: 11;
+                        float: right;
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    max-width: 15%;
+                    height: 50%;
+                }
+
+                @media (max-width: 1000px) {
+                    max-width: 5%;
+                    height: 50%;
+                }
+
+                @media (max-width: $breekpunt) {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .home-col-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            .home-div-logo {
+                top: 0;
+                z-index: 12;
+                width: 100%;
+                height: auto;
+                margin: auto;
+                padding: 8% 8% 0 14%;
+
+                img {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .home-txt {
+                width: 75%;
+                margin: 40px auto;
+                padding: 20px;
+            }
+
+            .txt {
+                a {
+                    text-decoration: none;
+                }
+
+                a:hover,
+                a:active {
+                    text-decoration: none;
+                }
+
+                .bttns {
+                    text-decoration: none;
+                    color: black;
+                    display: block;
+                    box-sizing: border-box;
+                    line-height: 64px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 1em;
+                    background-color: $color3;
+                    margin-top: 1em;
+                    border-radius: 20px;
+                    border: 0;
+                    min-width: 50%;
+
+                    @media (max-width: 1130px) {
+                        width: 100%;
+                        height: 50%;
+                    }
+
+                }
+
+                .bttns:hover,
+                .bttns:active,
+                .bttns:visited {
+                    background-color: $color4;
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+
+            .home-ill-mobile {
+                padding: 20px;
+                width: 50%;
+                height: auto;
+                float: right;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .footer {
+        max-height: 100px;
+        padding: 20px 10px 40px 10px;
+        text-align: right;
+        font-family: $fontset2;
+        font-weight: 700;
+        border-top: 2px solid black;
+    }
+
+    /*Tekstvakken van padding voorzien*/
+    .eerste-rij {
+        margin-top: 200px;
+        min-height: 400px;
+    }
+
+    .txt-left {
+        padding: 20px 20px 20px 10%;
+    }
+
+    .img-left {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .txt-right {
+        padding: 20px 10% 20px 20px;
+    }
+
+    .img-right {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    /*INFO PAGE*/
+    .cnt-info {
+        margin: 0 auto;
+        height: auto;
+        padding: 0;
+
+        .eerste-rij {
+            padding: 0;
+
+            .kleurvlak-rechts {
+                width: 50%;
+                height: 100%;
+                float: right;
+                background-color: $color2;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                }
+            }
+        }
+
+        .tweede-rij {
+            .kleurvlak-links {
+                width: 50%;
+                height: 100%;
+                float: left;
+                background-color: $color2;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    float: right;
+                }
+            }
+        }
+    }
+
+
+    .container {
+        .row {
+            margin-bottom: 20px;
+
+            /*TIPS PAGE*/
+            .tip-txt {
+                width: 75%;
+                padding: 20px;
+                float: right;
+                position: relative;
+                margin-bottom: 40px;
+
+                h1 {
+                    padding-left: 25%;
+                }
+
+                p {
+                    padding-left: 25%;
+                }
+            }
+
+            /*TIPS nummering*/
+            #tip1 {
+                h1::before {
+                    content: "1";
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    color: $color2;
+                    font-family: $fontset1;
+                    font-weight: bold;
+                    font-size: 12rem;
+                    max-width: 25%;
+                    display: block;
+                }
+            }
+
+            #tip2 {
+                h1::before {
+                    content: "2";
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    color: $color2;
+                    font-family: $fontset1;
+                    font-weight: bold;
+                    font-size: 12rem;
+                    max-width: 25%;
+                    display: block;
+                }
+            }
+
+            #tip3 {
+                h1::before {
+                    content: "3";
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    color: $color2;
+                    font-family: $fontset1;
+                    font-weight: bold;
+                    font-size: 12rem;
+                    max-width: 25%;
+                    display: block;
+                }
+            }
+
+            #tip4 {
+                h1::before {
+                    content: "4";
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    color: $color2;
+                    font-family: $fontset1;
+                    font-weight: bold;
+                    font-size: 12rem;
+                    max-width: 25%;
+                    display: block;
+                }
+            }
+
+            .tip-img {
+
+                img {
+                    margin: 20px auto;
+                    padding: 20px 30px;
+                    height: auto;
+                    width: 80%;
+
+                    display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                }
+            }
+        }
+
+        /*HULP CARDS PAGE*/
+        .row-card {
+            .cardblock {
+                color: white;
+                margin-top: 200px;
+                width: 50%;
+                height:auto;
+                margin: auto;
+                text-align: center;
+                padding: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                a:hover{
+                    text-decoration: none;
+                    color: $color2;
+                }
+
+                .bol {
+                    padding: 10px;
+                    margin: auto;
+
+                    .icon{
+                    font-size: 3rem;
+                    text-align: center;
+                    margin: auto;
+                    color: white;
+
+                    width: 90px;
+                    height: 90px;
+                    margin: auto;
+                    border-radius: 50%;
+                    background-color: $color4;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                }
+
+                .textblock {
+                    background-color: $color4;
+                    border-radius: 24px;
+                    border-style: hidden;
+                    width: 60%;
+                    margin: auto;
+                    padding: 20px;
+                    margin-top: -25px;
+                }
+            }
+        }
+    }
+}
+
+/*CALENDER*/
+.calender-row{
+    padding: 20px;
+    min-height: 200px;
+
+    .date{
+        text-align: right;
+        color: $color2;
+        margin-bottom: 40px;
+        padding: 10px 30px;
+    }
+
+    .event{
+        margin-bottom: 40px;
+
+        button{
+            -webkit-appearance: none;
+            border-radius: 20px;
+            background-color: $color4;
+            padding: 10px 20px;
+            border-style: none;
+            margin-top: 10px, 0, 30px,0;
+            font-size: 1rem;
+            color: white;
+
+            a{
+                background-color: $color4;
+                color: white;
+                text-decoration: none;
+            }
+            a:hover{
+                background-color: $color2;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
