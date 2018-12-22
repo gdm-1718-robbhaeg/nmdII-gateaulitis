@@ -9,7 +9,8 @@
     <title>Gateaulitis Contact | Robbe Haegeman | NMDII- GDM, Artevelde University College Ghent</title>
 
     <!-- bootstrap 4 css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <!-- font Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela+Round" rel="stylesheet">
 
@@ -21,7 +22,7 @@
     <script src="js/main.js"></script>
 
     <!-- Favicon-->
-    <link rel="icon" type="image/png" href="assets/favicon-wh.png"/>
+    <link rel="icon" type="image/png" href="assets/favicon-wh.png" />
 
     <!-- Hamburger icoon movile-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,7 +33,7 @@
 
     <!-- navigatie-->
     <div class="navbar" id="navbar">
-        <a href="#default" id="logolink"><img id="logo"src="assets/logo.png" alt="logo Gateaulitis"></a>
+        <a href="index.html" id="logolink"><img id="logo" src="assets/logo.png" alt="logo Gateaulitis"></a>
         <div class="navbar-right">
             <div id="links">
                 <a href="index.html">home</a>
@@ -45,60 +46,87 @@
             </div>
             <div id="menu_icon">
                 <a href="javascript:void(0);" class="icon" onclick="mobilemenu()">
-                        <i class="fa fa-bars"></i>
+                    <i class="fa fa-bars"></i>
                 </a>
             </div>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
     </div>
-    
+
+    <!-- content-->
     <div class="container">
-        <div class="row calender-row eerste-rij">
-            <div class="col-md-3 offset-md-2 date">
-                <h5>24</h5>
-                <h6>dec</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Introsessie mindfullness</h2>
-                <p>Mindfullness  helpt je om met eenvoudige lichaamsoefeningen een gezond en gelukkig leven uit te bouwen en je eigen potentieel maximaal te verwezenlijken. De dynamische training bevordert de ontspanning van je lichaam en geest, stimuleert bewustwording van je energie en versoepelt en verstevigt je lichaam. Dit alles helpt je om je leven zodanig vorm te geven dat het je meer voldoening schenkt.</p>
-                <button><a href="https://i.pinimg.com/originals/b6/21/a0/b621a0325724c95a401e691ddb963f7e.png">Evenementenpagina</a></button>
+        <div class="row eerste-rij">
+
+            <!-- contact image-->
+            <div class="img-contact">
+                <img src="assets/contact.png" alt="">
             </div>
 
-            <div class="col-md-3 offset-md-2 date">
-                <h5>05</h5>
-                <h6>jan</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Bakintiatie i.s.m. KVLV</h2>
-                <p>Vind je het leuk om je zelfgebakken lekkernijen te versieren? Je leert handige technieken om de mooiste decoraties te maken. Je krijgt je eigen creaties mee naar huis. Thema: ouder/kind stapeltaart. Steek zelf de handen uit de mouwen en bak heerlijk brood en gebak tijdens onze bakintiatie.</p>
-                <button><a href="https://i.pinimg.com/originals/57/41/68/5741687db5b857995184f85c49e35c8b.png">Evenementenpagina</a></button>
+            <!-- leden-->
+            <div class="col-md-12 contact">
+                <h2>Lid worden?</h2>
+                <p>Lorem ipsum</p>
             </div>
 
-            <div class="col-md-3 offset-md-2 date">
-                <h5>16</h5>
-                <h6>jan</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Nieuwjaarsreceptie voor leden</h2>
-                <p>Kom samen met ons proosten op het nieuwe jaar! Nieuwe en oude leden kunnen bijpraten met hartverwarmende hapjes en drankjes, warme ontmoetingen en sfeervolle liveoptredens. Bovendien is dit ook een geschikt moment voor nieuwe leden om in te stappen. Alvast een zorgeloos cupcake-vrij jaar toegewenst!</p>
-                <button><a href="http://justsomething.co/wp-content/uploads/2014/07/20-baking-projects-fails.jpg">Evenementenpagina</a></button>
+            <!-- formulier-->
+            <div class="col-md-12 contact">
+                <h2>Contacteer ons</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01">Voornaam</label>
+                            <input type="text" class="form-control" id="validationDefault01" placeholder="Voornaam"
+                                required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02">Achternaam</label>
+                            <input type="text" class="form-control" id="validationDefault02" placeholder="Achternaam"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Stad</label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="Stad"
+                                required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationDefault04">Provincie</label>
+                            <input type="text" class="form-control" id="validationDefault04" placeholder="Provincie"
+                                required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationDefault05">Postcode</label>
+                            <input type="text" class="form-control" id="validationDefault05" placeholder="Postcode" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                                Ik ga akkoord met de gebruiksvoorwaarden en wil graag meer mailtjes van jullie ontvangen.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                                Ja, ik ben geïnteresseerd om lid te worden van vzw Cupcake Crush.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" type="submit">Versturen</button>
+                </form>
             </div>
 
-            <div class="col-md-3 offset-md-2 date">
-                <h5>11</h5>
-                <h6>feb</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Blootstellingssessie</h2>
-                <p>Tijd om met z'n allen onze gezamelijke angst te overwinnen en aan 'exposure' te doen. Niets beter dan een rauwe confrontatie met de suikermoordenaars die we allen zo vrezen. Enkel voor de echte durvers. Niet verantwoordelijk voor gebeurlijke ongevallen.</p>
-                <button><a href="http://farm4.static.flickr.com/3421/3396791200_86242b50f6.jpg">Evenementenpagina</a></button>
+            <!-- footer-->
+            <div class="col-md-12 footer">
+                Disclaimer| Robbe Haegeman | © 2018 Arteveldehogeschool Gent
             </div>
         </div>
-
-        <div class="col-md-12 footer">
-            Disclaimer| Robbe Haegeman | © 2018 Arteveldehogeschool Gent
-        </div>
-    </div>
 
 
 </body>

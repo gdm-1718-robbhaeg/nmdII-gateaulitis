@@ -32,7 +32,7 @@
 
     <!-- navigatie-->
     <div class="navbar" id="navbar">
-        <a href="#default" id="logolink"><img id="logo"src="assets/logo.png" alt="logo Gateaulitis"></a>
+        <a href="index.html" id="logolink"><img id="logo"src="assets/logo.png" alt="logo Gateaulitis"></a>
         <div class="navbar-right">
             <div id="links">
                 <a href="index.html">home</a>
@@ -52,49 +52,120 @@
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
     </div>
     
+    <!-- crowdfunding-->
     <div class="container">
-        <div class="row calender-row eerste-rij">
-            <div class="col-md-3 offset-md-2 date">
-                <h5>24</h5>
-                <h6>dec</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Introsessie mindfullness</h2>
-                <p>Mindfullness  helpt je om met eenvoudige lichaamsoefeningen een gezond en gelukkig leven uit te bouwen en je eigen potentieel maximaal te verwezenlijken. De dynamische training bevordert de ontspanning van je lichaam en geest, stimuleert bewustwording van je energie en versoepelt en verstevigt je lichaam. Dit alles helpt je om je leven zodanig vorm te geven dat het je meer voldoening schenkt.</p>
-                <button><a href="https://i.pinimg.com/originals/b6/21/a0/b621a0325724c95a401e691ddb963f7e.png">Evenementenpagina</a></button>
+        <div class="row eerste-rij">
+            <!-- info crowdfunding-->
+            <div class="col-lg-8 col-md-12 info-crowdfunding">
+                <h2>Crowdfunding</h2>
+                <h3>Hoe kan ik bijdragen?</h3>
+
+                <div class="column">
+                    <ul class="plan">
+                        <li><h3>Basisbijdrage</h3></li>
+                        <li><h4>bedrag vanaf €25</h4></li>
+                        <li>5 waardebonnen voor workshops</li>
+                        <li>een half jaar lang ons magazine in de bus </li>
+                        <li>een gezond geweten</li>
+                        <li>psychologische ondersteuning</li>
+                        <li class="li-button"><a href="#" class="button">Meer info</a></li>
+                    </ul>   
+                </div>
+
+                <div class="column">
+                    <ul class="plan">
+                        <li><h3>Pro-sponsor</h3></li>
+                        <li><h4>bedrag vanaf <br> €15 per maand</h4></li>
+                        <li>alles uit het basispakket</li>
+                        <li>1 jaar gratis toegang tot op al onze evenementen</li>
+                        <li>1 fiscaal jaar lang geen suikertaks betalen aan de regering<br>
+                            een gezond geweten </li>
+                        <li>ons bestsellend kookboek 'Alternatieve suikers'</li>
+                        <li class="li-button"><a href="#" class="button">Meer info</a></li>
+                    </ul>   
+                </div>
+
+                <div class="crowdfunding-uitleg">
+                    <p>
+                        We hebben jullie hulp nodig om publieke gesprekken aan te wakkeren voor gateaulitis en andere onbekende gezondheidsuitdagingen. We willen door middel van een transparante communicatie en outreach het woord verspreiden, en dat begint bij jullie! Enerzijds willen we het wetenschappelijk onderzoek naar gateaulitis aanzwengelen en anderzijds onze werking financieel ondersteunen om de maatschappij bewuster te maken van de fobie. Het gedoneerde bedrag wordt gebruikt voor onderhoudskosten van website e.d., evenementen als praatavonden op touw te zetten,</p>
+                    <p><strong>
+                        We geloven in transparantie, en daarom wordt je als 'backer' op de hoogte gehouden van onze activiteiten via social media, de nieuwsbrieven in je mailbox en het magazine in je brievenbus.</strong>
+                    </p>
+                </div>
             </div>
 
-            <div class="col-md-3 offset-md-2 date">
-                <h5>05</h5>
-                <h6>jan</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Bakintiatie i.s.m. KVLV</h2>
-                <p>Vind je het leuk om je zelfgebakken lekkernijen te versieren? Je leert handige technieken om de mooiste decoraties te maken. Je krijgt je eigen creaties mee naar huis. Thema: ouder/kind stapeltaart. Steek zelf de handen uit de mouwen en bak heerlijk brood en gebak tijdens onze bakintiatie.</p>
-                <button><a href="https://i.pinimg.com/originals/57/41/68/5741687db5b857995184f85c49e35c8b.png">Evenementenpagina</a></button>
+            <!-- zijbalk crowdfunding-->
+            <div class="col-lg-4 col-md-12 sidebar-crowdfunding">
+                
+                <div class="sidebar-el crwdf-img">
+                    <img src="assets/crowdfunding1.png" alt="money">
+                </div>
+
+                <div class="sidebar-el crwdf-doel">
+                    <h3>Doel</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 35%"></div>
+                    </div>
+
+                    <div id="percentage">
+                        <p>
+                            35%
+                        </p>
+                    </div>
+                    <div id="bedrag">
+                        <p>
+                            €5250 opgehaald
+                        </p>
+                    </div>
+
+                    <a href="#" class="button"><button class="doneerbttn">doneren</button></a>
+                </div>
+
+                <div class="sidebar-el crwdf-countdown">
+                    <h3>nog</h3>
+
+                    <!-- COUNTDOWN TIMER -->
+                    <div id="countdown">
+                        <p id="demo"></p>
+                        <script>
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Jan 28, 2019 16:00:00").getTime();
+
+                        // Update the count down every 1 second
+                        var x = setInterval(function() {
+
+                        // Get todays date and time
+                        var now = new Date().getTime();
+
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id="demo"
+                        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+
+                        // If the count down is finished, write some text 
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+                        }, 1000);
+                        </script>
+                    </div>
+
+                    <h3>te gaan</h3>
+                </div>
             </div>
 
-            <div class="col-md-3 offset-md-2 date">
-                <h5>16</h5>
-                <h6>jan</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Nieuwjaarsreceptie voor leden</h2>
-                <p>Kom samen met ons proosten op het nieuwe jaar! Nieuwe en oude leden kunnen bijpraten met hartverwarmende hapjes en drankjes, warme ontmoetingen en sfeervolle liveoptredens. Bovendien is dit ook een geschikt moment voor nieuwe leden om in te stappen. Alvast een zorgeloos cupcake-vrij jaar toegewenst!</p>
-                <button><a href="http://justsomething.co/wp-content/uploads/2014/07/20-baking-projects-fails.jpg">Evenementenpagina</a></button>
-            </div>
-
-            <div class="col-md-3 offset-md-2 date">
-                <h5>11</h5>
-                <h6>feb</h6>
-            </div>
-            <div class="col-md-7 event">
-                <h2>Blootstellingssessie</h2>
-                <p>Tijd om met z'n allen onze gezamelijke angst te overwinnen en aan 'exposure' te doen. Niets beter dan een rauwe confrontatie met de suikermoordenaars die we allen zo vrezen. Enkel voor de echte durvers. Niet verantwoordelijk voor gebeurlijke ongevallen.</p>
-                <button><a href="http://justsomething.co/wp-content/uploads/2014/07/20-baking-projects-fails.jpg">Evenementenpagina</a></button>
-            </div>
         </div>
 
+        <!-- footer-->
         <div class="col-md-12 footer">
             Disclaimer| Robbe Haegeman | © 2018 Arteveldehogeschool Gent
         </div>

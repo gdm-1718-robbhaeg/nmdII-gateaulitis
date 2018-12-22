@@ -10,7 +10,7 @@
 }
 
 body {
-  color: #707070;
+  color: black;
   background-color: #fad454;
   /*TYPOGRAPHY*/
   /*TERUGKERENDE LAY_OUT*/
@@ -26,6 +26,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 body h1 {
   line-height: 1em;
   font-size: 3.5rem;
+  font-weight: 700;
 }
 
 body h2 {
@@ -61,21 +62,16 @@ body p {
 }
 
 body .navbar {
-  /* Create a sticky/fixed navbar */
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 50px 10px;
   /* Large padding which will shrink on scroll (using JS) */
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  /* Adds a transition effect when the padding is decreased */
   position: fixed;
-  /* Sticky/fixed navbar */
   width: 100%;
   top: 0;
-  /* At the top */
   z-index: 99;
-  /* Style the navbar links */
   /* Add responsiveness - on screens less than 850px wide, display the navbar vertically instead of horizontally */
 }
 
@@ -168,7 +164,7 @@ body .container-fluid .home-row .home-ill {
   padding: 40px 0;
   float: left;
   display: block;
-  background-color: #553c55;
+  background-color: #e96669;
   z-index: 10;
   position: absolute;
   position: fixed;
@@ -259,7 +255,7 @@ body .container-fluid .home-col-logo .txt .bttns {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1em;
-  background-color: #fd9945;
+  background-color: #e96669;
   margin-top: 1em;
   border-radius: 20px;
   border: 0;
@@ -293,6 +289,7 @@ body .container-fluid .home-col-logo .home-ill-mobile {
 
 body .footer {
   max-height: 100px;
+  margin: 0 auto;
   padding: 20px 10px 40px 10px;
   text-align: right;
   font-family: "Open Sans", sans-serif;
@@ -310,7 +307,7 @@ body .txt-left {
 }
 
 body .img-left {
-  padding: 0;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -319,7 +316,7 @@ body .txt-right {
 }
 
 body .img-right {
-  padding: 0;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -365,8 +362,10 @@ body .container {
 
 body .container .row {
   margin-bottom: 20px;
+  position: relative;
   /*TIPS PAGE*/
   /*TIPS nummering*/
+  /*FORMS*/
 }
 
 body .container .row .tip-txt {
@@ -379,6 +378,7 @@ body .container .row .tip-txt {
 
 body .container .row .tip-txt h1 {
   padding-left: 25%;
+  color: #e96669;
 }
 
 body .container .row .tip-txt p {
@@ -455,6 +455,208 @@ body .container .row .tip-img img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .container .row .contact {
+  clear: right;
+  margin-bottom: 50px;
+  padding-right: 50%;
+}
+
+body .container .row .contact button {
+  padding: 10px 25px;
+  background-color: #553c55;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+body .container .row .img-contact {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  position: absolute;
+  right: 0%;
+}
+
+body .container .row .img-contact img {
+  width: 75%;
+  float: right;
+}
+
+body .container .row .info-crowdfunding .column {
+  float: left;
+  width: 50%;
+  padding: 20px 20px 20px 0;
+  margin-bottom: 20px;
+}
+
+body .container .row .info-crowdfunding .column .plan {
+  min-height: 550px;
+  list-style-type: none;
+  text-align: center;
+  border: 4px solid #553c55;
+  color: #553c55;
+  border-radius: 24px;
+  margin: 0;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+body .container .row .info-crowdfunding .column .plan li {
+  padding: 10px;
+}
+
+body .container .row .info-crowdfunding .column .plan li h3 {
+  font-weight: 900;
+  color: #e96669;
+}
+
+body .container .row .info-crowdfunding .column .plan li h4 {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #553c55;
+}
+
+body .container .row .info-crowdfunding .column .plan .li-button {
+  position: absolute;
+  bottom: 20px;
+  right: 25%;
+  height: 50px;
+}
+
+body .container .row .info-crowdfunding .column .plan .li-button .button {
+  padding: 10px 25px;
+  background-color: #553c55;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+body .container .row .info-crowdfunding .column .plan .li-button .button:hover {
+  background-color: #e96669;
+  color: black;
+}
+
+body .container .row .info-crowdfunding .column .plan:hover {
+  -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  body .container .row .info-crowdfunding .column {
+    width: 100%;
+  }
+}
+
+body .container .row .info-crowdfunding .crowdfunding-uitleg {
+  padding: 50px;
+}
+
+body .container .row .sidebar-crowdfunding {
+  background-color: #553c55;
+  border-radius: 24px;
+  padding: 20px;
+  color: #fad454;
+  margin-top: 150px;
+  position: relative;
+  text-align: center;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-img {
+  margin: 0 auto;
+  position: absolute;
+  top: -50px;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-img img {
+  width: 60%;
+  height: auto;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel {
+  margin-top: 280px;
+  height: 280px;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel h3 {
+  text-align: left;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel .progress {
+  background-color: #e96669;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel #percentage {
+  width: 50%;
+  float: left;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel #percentage p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel #bedrag {
+  width: 50%;
+  float: right;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel #bedrag p {
+  margin-top: 10px;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel a .doneerbttn {
+  margin: 10px auto;
+  padding: 10px 25px;
+  background-color: #fad454;
+  color: #e96669;
+  border: none;
+  border-radius: 16px;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel a .doneerbttn:hover {
+  background-color: #e96669;
+  color: #553c55;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-doel a:hover {
+  background-color: #e96669;
+  color: black;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-countdown h3 {
+  text-transform: uppercase;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-countdown #countdown {
+  color: #e96669;
+}
+
+body .container .row .sidebar-crowdfunding .crwdf-countdown #countdown p {
+  margin-top: 0;
+  font-size: 2rem;
+  border-top: 4px solid #e96669;
+  border-bottom: 4px solid #e96669;
 }
 
 body .container .row-card .cardblock {
@@ -536,24 +738,29 @@ body .container .row-card .cardblock .textblock {
 
 .calender-row .event button {
   -webkit-appearance: none;
-  border-radius: 20px;
-  background-color: #553c55;
-  padding: 10px 20px;
-  border-style: none;
   margin-top: 10px, 0, 30px,0;
+  padding: 10px 20px;
+  border-radius: 16px;
+  background-color: #553c55;
+  border-style: none;
   font-size: 1rem;
-  color: white;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700px;
 }
 
 .calender-row .event button a {
-  background-color: #553c55;
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
-.calender-row .event button a:hover {
+.calender-row .event button:hover {
   background-color: #e96669;
-  color: white;
+  color: black;
+}
+
+.calender-row .event button:hover a:hover {
+  color: black;
   text-decoration: none;
+  font-weight: 700px;
 }
 /*# sourceMappingURL=style.css.map */
