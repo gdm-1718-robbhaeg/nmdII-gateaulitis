@@ -42,10 +42,18 @@ body {
     h2 {
         margin-top: 20px;
         font-size: 3rem;
+
+        @media (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
 
     h3{
         font-size: 2rem;
+
+        @media (max-width: 600px) {
+            font-size: 1.5rem;
+        }
     }
 
     h4{
@@ -72,7 +80,7 @@ body {
     }
 
     /*TERUGKERENDE LAY_OUT*/
-
+    /*NAVIGATION BAR*/
     .navbar {
         overflow: hidden;
         background-color: #f1f1f1;
@@ -97,7 +105,7 @@ body {
         }
 
         #logolink:hover {
-            background-color: none;
+                background-color: none;     
         }
 
         a.icon {
@@ -122,6 +130,7 @@ body {
 
         .navbar-right {
             float: right;
+            margin-right: 20px;
         }
 
         /* Add responsiveness - on screens less than 850px wide, display the navbar vertically instead of horizontally */
@@ -224,11 +233,11 @@ body {
 
             .home-div-logo {
                 top: 0;
-                z-index: 12;
+                z-index: 0;
                 width: 100%;
                 height: auto;
                 margin: auto;
-                padding: 8% 8% 0 14%;
+                padding: 0 15%;
 
                 img {
                     margin: 0 auto;
@@ -239,7 +248,7 @@ body {
 
             .home-txt {
                 width: 75%;
-                margin: 40px auto;
+                margin: 20px auto;
                 padding: 20px;
             }
 
@@ -310,11 +319,18 @@ body {
     /*Tekstvakken van padding voorzien*/
     .eerste-rij {
         margin-top: 200px;
-        min-height: 400px;
+        height: auto;
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
     }
 
     .txt-left {
         padding: 20px 20px 20px 10%;
+        @media (max-width: 768px) {
+            padding: 0 60px;
+            margin: 0 auto;
+        }
     }
 
     .img-left {
@@ -324,6 +340,10 @@ body {
 
     .txt-right {
         padding: 20px 10% 20px 20px;
+        @media (max-width: 768px) {
+            padding: 0 60px;
+            margin: 0 auto;
+        }
     }
 
     .img-right {
@@ -335,45 +355,111 @@ body {
     .cnt-info {
         margin: 0 auto;
         height: auto;
-        padding: 0;
+        padding: 0px;
+        overflow: hidden;
 
         .eerste-rij {
             padding: 0;
 
-            .kleurvlak-rechts {
-                width: 50%;
-                height: 100%;
-                float: right;
-                background-color: $color2;
+            .col-kleurvlak{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    float: left;
+                .kleurvlak-rechts {
+                    position: absolute;
+                    right: 0px;
+                    width: 75%;
+                    height: 75%;
+
+                    background-color: $color2;
+                    
+                    img {
+                        position: absolute;
+                        bottom: -80px;
+                        right: 25%;
+                        padding-right: 40px;
+                        width: 100%;
+                        height: auto;
+                        max-height: auto;
+                }
+                }
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .txt-left{
+                p{
+                    margin-top: 0;
+                    .info-img-mobile-right{
+                        float: right;
+                        width: 50%;
+                        padding: 20px;
+
+                        @media (min-width:768px) {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
 
         .tweede-rij {
-            .kleurvlak-links {
-                width: 50%;
-                height: 100%;
-                float: left;
-                background-color: $color2;
+            margin: 40px auto;
+            .col-kleurvlak{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    float: right;
+                .kleurvlak-links {
+                    position: absolute;
+                    left: 0px;
+                    width: 75%;
+                    height: 75%;
+
+                    background-color: $color2;
+    
+                    img {
+                        position: absolute;
+                        bottom: -80px;
+                        left: 30%;
+                        padding-right: 40px;
+                        width: auto;
+                        height: auto;
+                        max-height: 500px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .txt-right{
+                p{
+                    margin-top: 0;
+                    .info-img-mobile-left{
+                        padding: 20px;
+                        float: right;
+                        width: 50%;
+
+                        @media (min-width:768px) {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
     }
 
-
     .container {
         .row {
-            margin-bottom: 20px;
             position: relative;
 
             /*TIPS PAGE*/
@@ -391,6 +477,30 @@ body {
 
                 p {
                     padding-left: 25%;
+
+                    .tip-img-mobile{
+                        display: none;
+
+                        @media (max-width: 768px) {
+                            margin: 20px auto 0 auto;
+                            display: block;
+                            width: 50%;
+                            padding: 10px;
+                        }
+                    }
+                }
+                
+                @media (max-width: 600px) {
+                    width: 100%;
+                    padding-right: 40px;
+                    margin-bottom: 0;
+                    h1{
+                        font-size: 2.5rem;
+                        padding-left: 20%;
+                    }
+                    p{
+                        padding-left: 20%;
+                    }
                 }
             }
 
@@ -401,12 +511,24 @@ body {
                     position: absolute;
                     top: 70px;
                     left: 0;
+                    top: 70px;
                     color: $color2;
                     font-family: $fontset1;
                     font-weight: bold;
                     font-size: 12rem;
                     max-width: 25%;
                     display: block;
+
+                    @media (max-width: 600px) {
+                        font-size: 6rem;
+                        margin-left: 20px;
+                        top: 40px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 8rem;
+                        top: 50px;
+                    }
                 }
             }
 
@@ -422,6 +544,17 @@ body {
                     font-size: 12rem;
                     max-width: 25%;
                     display: block;
+
+                    @media (max-width: 600px) {
+                        font-size: 6rem;
+                        margin-left: 20px;
+                        top: 40px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 8rem;
+                        top: 50px;
+                    }
                 }
             }
 
@@ -437,6 +570,17 @@ body {
                     font-size: 12rem;
                     max-width: 25%;
                     display: block;
+
+                    @media (max-width: 600px) {
+                        font-size: 6rem;
+                        margin-left: 20px;
+                        top: 40px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 8rem;
+                        top: 50px;
+                    }
                 }
             }
 
@@ -452,11 +596,23 @@ body {
                     font-size: 12rem;
                     max-width: 25%;
                     display: block;
+
+                    @media (max-width: 600px) {
+                        font-size: 6rem;
+                        margin-left: 20px;
+                        top: 40px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 8rem;
+                        top: 50px;
+                    }
                 }
             }
 
+            /*TIPS image*/
             .tip-img {
-
+                
                 img {
                     margin: 20px auto;
                     padding: 20px 30px;
@@ -464,17 +620,58 @@ body {
                     width: 80%;
 
                     display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
                 }
             }
 
-            /*FORMS*/
+            /*HULPGROEP image en txt*/
+            .hulp-txt{
+                padding: 20px 40px;
+
+                h2{
+                    margin-top: 0;
+                }
+                .hulp-img-mobile{
+                    display: none;
+
+                    @media (max-width: 768px) {
+                        float: right;
+                        display: block;
+                        width: 40%;
+                        padding: 10px;
+                    }
+                }
+
+                @media (max-width: $breekpunt){
+                    padding: 20px;
+                }
+
+            }
+
+            .hulp-img{
+                padding: 40px 40px;
+                margin: auto auto;
+
+                img{
+                    width: 80%;
+                    height: auto;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            /*CONTACT*/
             .contact{
                 clear: right;
                 margin-bottom: 50px;
-                padding-right: 50%;
 
                 button{
                     padding: 10px 25px;
@@ -501,15 +698,25 @@ body {
                 img{
                     width: 75%;
                     float: right;
+
+                    @media (max-width: 767.98px) {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 767.98px) {
+                    display: none;
                 }
             }
+        }
 
+        /*CROWDFUNDING*/
+        .row-crwdf{
             .info-crowdfunding{
                 .column {
                     float: left;
                     width: 50%;
                     padding: 20px 20px 20px 0;
-                    margin-bottom: 20px;
 
                     .plan {
                         min-height: 550px;
@@ -570,7 +777,8 @@ body {
                     }  
                       
                     @media only screen and (max-width: 600px) {
-                          width: 100%;
+                          width: 80%;
+                          margin: 0 50px;
                         }
                   }
 
@@ -586,6 +794,7 @@ body {
                 color: $color1;
 
                 margin-top: 150px;
+                margin-bottom: 40px;
                 position: relative;
                 text-align: center;
 
@@ -676,19 +885,39 @@ body {
                         }
                     }
                 }
+
+                @media only screen and (max-width: 600px) {
+                    margin: 20px;
+
+                    .crwdf-doel{
+                        height: 230px;
+                    }
+                  }
+            }
+
+            @media (max-width: 600px){
+                padding: 20px;
+
+                h2{
+                    font-size: 2rem;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
             }
         }
 
         /*HULP CARDS PAGE*/
         .row-card {
+
             .cardblock {
                 color: white;
                 margin-top: 200px;
                 width: 50%;
-                height:auto;
+                height:200px;
                 margin: auto;
                 text-align: center;
-                padding: 20px;
+                padding: 10px 20px;
 
                 a{
                     text-decoration: none;
@@ -697,7 +926,7 @@ body {
 
                 a:hover{
                     text-decoration: none;
-                    color: $color2;
+                    color: black;
                 }
 
                 .bol {
@@ -729,8 +958,40 @@ body {
                     border-style: hidden;
                     width: 60%;
                     margin: auto;
-                    padding: 20px;
+                    padding: 15px 20px;
                     margin-top: -25px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .textblock:hover{
+                    background-color: $color2;
+                    color: black;
+                }
+                @media (max-width: 992px) {
+                    .textblock{
+                        width: 100%;
+                        height: 80px;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    .bol{
+                        .icon{
+                            font-size: 2.5rem;
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+
+                    .textblock{
+                        width: 100%;
+                        height: 60px;
+                        h4{
+                            font-size: 1.2rem;
+                        }
+                    }
                 }
             }
         }
@@ -741,12 +1002,50 @@ body {
 .calender-row{
     padding: 20px;
     min-height: 200px;
+    position: relative;
+    
+
+    .calender-img{
+        width: 100%;
+        position: absolute;
+        left: 20;
+        position: fixed;
+        z-index: 20;
+        margin: 0 auto;
+        img{
+            width: 15%;
+            height: auto;
+
+            @media (max-width: 767.98px) {
+                display: none;
+            }
+        }
+    }
 
     .date{
         text-align: right;
         color: $color2;
         margin-bottom: 40px;
         padding: 10px 30px;
+
+        @media (max-width: 767.98px) {
+            margin: 0px auto;
+            width: 25%;
+            padding: 10px;
+            border: 4px solid $color2;
+            border-radius: 24px;
+
+            text-align: center;
+            
+            h5{
+                font-size: 3rem;
+                font-weight: 900;
+            }
+
+            h6{
+                font-size: 2rem;
+            }
+        }
     }
 
     .event{
